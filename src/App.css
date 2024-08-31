@@ -1,0 +1,196 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* GLOBAL STYLES */
+
+body,
+.App {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  background: url(https://www.toptal.com/designers/subtlepatterns/patterns/lightpaperfibers.png);
+  color: #333;
+}
+
+button {
+  background: none;
+  border: 2px solid transparent;
+  margin: 0;
+  padding: 8px 12px;
+  font-size: 1rem;
+  font-family: inherit;
+  cursor: pointer;
+  color: #fff;
+  background-color: #1717cd;
+  border-radius: 5px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+button:hover {
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+
+/* LAYOUT */
+
+.App {
+  display: flex;
+  height: 100vh;
+}
+
+/* SIDEBAR STYLES */
+
+.app-sidebar {
+  width: 30%;
+  background-color: #f7f9fc;
+  border-right: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-sidebar-header {
+  padding: 25px;
+  background-color: #70c0e0;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+.app-sidebar-header {
+  padding: 25px;
+  background-color: #000000;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: flex;  /* ใช้ flexbox */
+  align-items: center;
+}
+
+.app-sidebar-header h1 {
+  margin: 0;
+}
+
+.app-sidebar-header button {
+  margin-left: auto;  /* ดันปุ่มไปทางขวาสุด */
+  background-color: #70c0e0;
+  color: #fff;
+  border-radius: 5px;
+  padding: 8px 15px;
+  font-size: 1rem;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.app-sidebar-header button:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+
+.app-sidebar-notes {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.app-sidebar-note {
+  padding: 20px;
+  margin: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.sidebar-note-title {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.app-sidebar-note button {
+  color: crimson;
+  background-color: #fff;
+}
+
+.app-sidebar-note:hover {
+  background-color: #e9f1ff;
+  transform: translateY(-2px);
+}
+
+.app-sidebar-note.active {
+  background-color: #70c0e0;
+  color: #fff;
+}
+
+/* NOTE EDITOR/PREVIEW (MAIN) STYLES */
+
+.app-main {
+  width: 70%;
+  padding: 25px;
+  background-color: #f0f2f5;
+}
+
+.app-main-note-edit,
+.app-main-note-preview {
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* No Active Note */
+.no-active-note {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; 
+  width: 100%; 
+  text-align: center;
+  font-size: 2rem;
+  color: #999;
+}
+
+
+.app-main-note-edit input,
+textarea {
+  display: block;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.app-main-note-edit input {
+  font-size: 1.5rem;
+  height: 60px;
+}
+
+textarea {
+  resize: none;
+  height: calc(50vh - 130px);
+}
+
+/* Preview Section */
+
+.app-main-note-preview {
+  margin-top: 20px;
+  background-color: #ffffff;
+  border-top: 1px solid #ffffff;
+}
+
+.preview-title {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #70c0e0;
+}
+
+.markdown-preview {
+  font-size: 1rem;
+  line-height: 1.75rem;
+}
